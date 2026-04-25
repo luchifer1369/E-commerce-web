@@ -37,6 +37,11 @@ const reviewRoutes = require('./routes/reviews');
 // Mount routes
 app.use('/api/reviews', reviewRoutes);
 
+const adminRoutes = require('./routes/admin');
+
+// Mount routes
+app.use('/api/admin', adminRoutes);
+
 // Basic Health-Check Route
 app.get('/', (req, res) => {
     res.json({ message: 'E-Commerce UMKM API is running...' });
