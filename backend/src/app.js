@@ -12,6 +12,11 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+const authRoutes = require('./routes/auth');
+
+// Mount routes
+app.use('/api/auth', authRoutes);
+
 // Basic Health-Check Route
 app.get('/', (req, res) => {
     res.json({ message: 'E-Commerce UMKM API is running...' });
