@@ -17,6 +17,11 @@ const authRoutes = require('./routes/auth');
 // Mount routes
 app.use('/api/auth', authRoutes);
 
+const umkmRoutes = require('./routes/umkm');
+
+// Mount routes
+app.use('/api/umkm', umkmRoutes);
+
 // Basic Health-Check Route
 app.get('/', (req, res) => {
     res.json({ message: 'E-Commerce UMKM API is running...' });
