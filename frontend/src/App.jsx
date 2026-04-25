@@ -1,7 +1,11 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import UmkmDetail from './pages/UmkmDetail';
-import Navbar from './components/Navbar'; // Dibuat di langkah 4
+import ProductDetail from './pages/ProductDetail';
+import Cart from './pages/Cart';
+import BuyerOrders from './pages/BuyerOrders';
+import OwnerOrders from './pages/OwnerOrders';
+import Navbar from './components/Navbar';
 
 function App() {
   return (
@@ -12,6 +16,10 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/umkm/:id" element={<UmkmDetail />} />
+            <Route path="/product/:id" element={<ProductDetail />} />
+            <Route path="/cart" element={<Cart />} />
+            <Route path="/buyer/orders" element={<BuyerOrders />} />
+            <Route path="/owner/orders" element={<OwnerOrders />} />
           </Routes>
         </main>
       </div>
